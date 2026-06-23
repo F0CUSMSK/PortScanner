@@ -1,34 +1,4 @@
-#!/usr/bin/env python3
-"""
-🔍 PortScanner - Learn How Networks Work!
 
-A friendly, educational port scanner that teaches you about:
-  • How computers find each other on networks (TCP/IP)
-  • How to check if services are running on a computer
-  • How to write fast, parallel code (threading)
-  • How to generate professional reports
-
-Perfect for learning cybersecurity concepts in a safe, legal way!
-
-⚠️  IMPORTANT: Only scan networks and computers you own or have 
-               permission from the owner to scan!
-
-Usage Examples:
-    # Scan one computer (ports 1-1000)
-    python main.py --target 192.168.1.1
-
-    # Scan multiple computers
-    python main.py --target 192.168.1.1,192.168.1.2
-
-    # Try the interactive mode (guided questions)
-    python main.py --interactive
-
-    # Scan everything (all 65535 ports)
-    python main.py --target 192.168.1.1 --ports all
-
-Author: Cybersecurity Educational Tool
-License: MIT - Free to use and learn from!
-"""
 
 import argparse
 import sys

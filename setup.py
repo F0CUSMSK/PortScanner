@@ -1,7 +1,3 @@
-#!/usr/bin/env python3
-"""
-Setup script for PortScanner installation.
-"""
 
 from setuptools import setup, find_packages
 
