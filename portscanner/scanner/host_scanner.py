@@ -1,27 +1,4 @@
-"""
-🎼 Host Scanner Orchestrator - The Conductor!
 
-Imagine an orchestra:
-- Port scanner = Violins (plays individual notes)
-- Service detector = Composer (identifies what notes mean)
-- Logger = Audience feedback (tells us how we're doing)
-
-This module is the CONDUCTOR - it brings them all together!
-
-WHAT WE DO:
-1. Get a list of computers to scan (e.g., 192.168.1.1, 192.168.1.2)
-2. Scan MULTIPLE computers at the SAME TIME (Level 1: Host parallelism)
-3. For each computer, scan MULTIPLE ports at the SAME TIME (Level 2: Port parallelism)
-4. Identify what services are on open ports
-5. Give you a nice summary report
-
-TWO-LEVEL THREADING MAGIC:
-  Level 1: Scan 5 computers in parallel
-    Level 2: Scan 50 ports per computer in parallel
-    Result: 250 ports being checked at the same time! ⚡
-
-This is what makes us FAST!
-"""
 
 import threading
 from concurrent.futures import ThreadPoolExecutor, as_completed

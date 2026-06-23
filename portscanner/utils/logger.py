@@ -1,22 +1,3 @@
-"""
-📝 Professional Logging - Keeping Track of Everything!
-
-This module handles all the messages you see while scanning:
-  • Colored output in your terminal (no extra libraries needed!)
-  • File-based logging for records
-  • Progress bars so you know how far along we are
-  • Pretty formatted results
-  • Summary statistics
-
-Why colors? Because:
-  🟢 Green = Good/success
-  🔴 Red = Bad/error  
-  🟡 Yellow = Warning
-  🔵 Blue = Information
-
-Think of it like a reporter that tells you what's happening,
-with fancy formatting to make it easy to read!
-"""
 
 import os
 import sys

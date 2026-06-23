@@ -1,30 +1,4 @@
-"""
-🔍 Service Detection - "What Service Is Running On This Port?"
 
-When we find an open port, we want to know WHAT is running on it.
-This module helps with that!
-
-HOW IT WORKS:
-1. You tell us a port number (e.g., "22")
-2. We look it up in our database
-3. We tell you what usually runs there (e.g., "SSH")
-
-IMPORTANT: This is NOT hacking. We're just using the official
-IANA (Internet Assigned Numbers Authority) list of port standards.
-
-For example:
-  Port 22 = SSH (Secure Shell - remote login)
-  Port 80 = HTTP (Websites)
-  Port 443 = HTTPS (Secure websites)
-  Port 3306 = MySQL (Database)
-
-PORTS ARE ORGANIZED BY RANGES:
-  1-1023:     Well-known (System services)
-  1024-49151: Registered (Applications)
-  49152-65535: Dynamic (Temporary/changing use)
-
-This helps you understand what services are on your network!
-"""
 
 from typing import Dict, Optional, List
 from dataclasses import dataclass

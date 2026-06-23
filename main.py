@@ -35,11 +35,25 @@ def interactive_mode():
     choice = input("\nEnter a, b, or c: ").strip().lower()
     
     if choice == 'a':
-        target = input("📍 Enter the IP address (e.g., 192.168.1.1): ").strip()
-        targets = [target]
+        while True:
+            target = input("📍 Enter the IP address (e.g., 192.168.1.1): ").strip()
+            if InputValidator.validate_ip_address(target):
+                targets = [target]
+                break
+            else:
+                print(f"❌ '{target}' is not a valid IP address.")
+                print("💡 Tip: Use 4 numbers (0-255) separated by dots, e.g., 192.168.1.1")
     elif choice == 'b':
-        target_str = input("📍 Enter IPs separated by commas (e.g., 192.168.1.1,192.168.1.2): ").strip()
-        targets = [t.strip() for t in target_str.split(',')]
+        while True:
+            target_str = input("📍 Enter IPs separated by commas (e.g., 192.168.1.1,192.168.1.2): ").strip()
+            candidates = [t.strip() for t in target_str.split(',')]
+            invalid = [ip for ip in candidates if not InputValidator.validate_ip_address(ip)]
+            if not invalid:
+                targets = candidates
+                break
+            else:
+                print(f"❌ Invalid IP address(es): {', '.join(invalid)}")
+                print("💡 Tip: Use 4 numbers (0-255) separated by dots, e.g., 192.168.1.1")
     elif choice == 'c':
         target_file = input("📁 Enter the filename (e.g., targets.txt): ").strip()
         try:
@@ -50,8 +64,14 @@ def interactive_mode():
             sys.exit(1)
     else:
         print("❌ Invalid choice. Using default: single computer")
-        target = input("📍 Enter the IP address: ").strip()
-        targets = [target]
+        while True:
+            target = input("📍 Enter the IP address: ").strip()
+            if InputValidator.validate_ip_address(target):
+                targets = [target]
+                break
+            else:
+                print(f"❌ '{target}' is not a valid IP address.")
+                print("💡 Tip: Use 4 numbers (0-255) separated by dots, e.g., 192.168.1.1")
     
     # Question 2: Which ports to scan?
     print("\n\nStep 2️⃣  : Which ports do you want to scan?")

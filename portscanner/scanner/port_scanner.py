@@ -1,37 +1,4 @@
-"""
-🔌 Core Port Scanning - The Heart of the Tool!
 
-This is where the magic happens! Here's what we do:
-
-1. CREATE A SOCKET
-   Think of a socket like a telephone line. We create a line,
-   then try to dial each port number.
-
-2. TRY TO CONNECT
-   We send a "hello, are you there?" message to each port.
-   - If it says "yes!" → PORT IS OPEN ✓
-   - If it says "no!" → PORT IS CLOSED ✗
-   - If it doesn't answer → PORT IS FILTERED (firewall) 🟡
-
-3. DO IT REALLY FAST
-   Instead of checking one port at a time (SLOW),
-   we check 50 ports at the SAME TIME using threading!
-
-KEY CONCEPTS YOU'RE LEARNING:
-- Sockets: Network connections (like phone lines for computers)
-- TCP/IP: The protocol used on the internet
-- Ports: Special "doors" on a computer (0-65535 of them!)
-- Threading: Doing many things at once (why we're FAST ⚡)
-- Timeout: Waiting a maximum time before giving up
-
-REAL EXAMPLE:
-Think of scanning a building:
-  Building = Computer (IP address)
-  Doors = Ports (22, 80, 443, etc.)
-  Knocking on doors = Attempting connections
-  Answers door = Open port (service listening)
-  Doesn't answer = Closed or filtered port
-"""
 
 import socket
 import threading

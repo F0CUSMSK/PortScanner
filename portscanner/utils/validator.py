@@ -1,22 +1,4 @@
-"""
-✅ Input Validation - Making Sure Everything is Valid!
 
-Before we start scanning, we need to check that everything you told us
-makes sense. This module is like a "quality checker" that says:
-
-  ✓ "Yes, that's a valid IP address!"
-  ✗ "Hmm, that doesn't look like an IP address"
-  ✓ "That port range looks good"
-  ✗ "Ports must be between 1 and 65535"
-
-We validate:
-- IP addresses (single, multiple, or from files)
-- Port ranges (must be 1-65535)
-- File existence and readability
-- Export format choices (json, txt, html)
-
-Think of it like checking your passport before boarding a plane!
-"""
 
 import os
 import re
@@ -35,53 +17,12 @@ class InputValidator:
 
     @staticmethod
     def validate_ip_address(ip: str) -> bool:
-        """
-        Check if this looks like a valid IP address.
-
-        An IP address has 4 numbers separated by dots.
-        Each number must be between 0 and 255.
-
-        Args:
-            ip: The IP address to check (e.g., "192.168.1.1")
-
-        Returns:
-            True if it's valid, False if it's not
-
-        Examples:
-            ✓ InputValidator.validate_ip_address("192.168.1.1")  → True
-            ✓ InputValidator.validate_ip_address("8.8.8.8")      → True
-            ✗ InputValidator.validate_ip_address("999.999.999.999") → False
-            ✗ InputValidator.validate_ip_address("hello")        → False
-        """
+      
         return bool(InputValidator.IPV4_PATTERN.match(ip.strip()))
 
     @staticmethod
     def parse_targets(targets_input: str) -> List[str]:
-        """
-        Parse a list of IP addresses from a string.
-
-        You can give us IPs separated by commas, like:
-          "192.168.1.1,192.168.1.2,192.168.1.3"
-        
-        We'll check that each one is a valid IP and give you helpful
-        feedback if something is wrong.
-
-        Args:
-            targets_input: Comma-separated IP addresses
-
-        Returns:
-            List of valid IP addresses
-
-        Raises:
-            ValueError: If any IP is invalid (with helpful suggestions)
-
-        Examples:
-            ✓ parse_targets("192.168.1.1,192.168.1.2")
-              → ['192.168.1.1', '192.168.1.2']
-            
-            ✗ parse_targets("192.168.1.999")
-              → ValueError with message showing what's wrong
-        """
+       
         ips = [ip.strip() for ip in targets_input.split(',')]
         invalid_ips = [ip for ip in ips if not InputValidator.validate_ip_address(ip)]
 
