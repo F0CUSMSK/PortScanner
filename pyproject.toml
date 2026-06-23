@@ -38,10 +38,10 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/yourusername/portscanner"
-Documentation = "https://github.com/yourusername/portscanner#readme"
-Repository = "https://github.com/yourusername/portscanner.git"
-Issues = "https://github.com/yourusername/portscanner/issues"
+Homepage = "https://github.com/F0CUSMSK/PortScanner"
+Documentation = "https://github.com/F0CUSMSK/PortScanner#readme"
+Repository = "https://github.com/F0CUSMSK/PortScanner.git"
+Issues = "https://github.com/F0CUSMSK/PortScanner/issues"
 
 [tool.black]
 line-length = 100

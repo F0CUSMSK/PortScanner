@@ -8,7 +8,7 @@ Welcome! This guide will get you up and running in 5 minutes.
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/portscanner.git
+git clone https://github.com/F0CUSMSK/PortScanner.git
 cd portscanner
 
 # Run directly (no installation needed!)
@@ -18,7 +18,7 @@ python3 main.py --interactive
 ### Option 2: Install as a Package
 
 ```bash
-git clone https://github.com/yourusername/portscanner.git
+git clone https://github.com/F0CUSMSK/PortScanner.git
 cd portscanner
 
 # Install in development mode

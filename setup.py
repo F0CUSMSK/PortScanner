@@ -11,7 +11,7 @@ setup(
     description="A friendly, educational port scanner for learning networking concepts",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/yourusername/portscanner",
+    url="https://github.com/F0CUSMSK/PortScanner",
     packages=find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3",

@@ -13,7 +13,7 @@ Thanks for your interest in contributing! This is an educational project, and co
 
 ### 1. Fork the Repository
 ```bash
-git clone https://github.com/yourusername/portscanner.git
+git clone https://github.com/F0CUSMSK/PortScanner.git
 cd portscanner
 ```
 
@@ -157,7 +157,7 @@ python3 main.py --target 127.0.0.1 --ports 1-100 --export all
 
 ## Questions?
 
-- Check existing [issues](https://github.com/yourusername/portscanner/issues)
+- Check existing [issues](https://github.com/F0CUSMSK/PortScanner/issues)
 - Read [README.md](README.md) and [GETTING_STARTED.md](GETTING_STARTED.md)
 - Ask in discussions or open an issue!
 

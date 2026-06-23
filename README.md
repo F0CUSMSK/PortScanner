@@ -24,7 +24,7 @@ python3 --version
 ### Option 1: Quick Run (No Installation)
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/portscanner.git
+git clone https://github.com/F0CUSMSK/PortScanner.git
 cd portscanner
 
 # Run in interactive mode
@@ -33,7 +33,7 @@ python3 main.py --interactive
 
 ### Option 2: Install Package
 ```bash
-git clone https://github.com/yourusername/portscanner.git
+git clone https://github.com/F0CUSMSK/PortScanner.git
 cd portscanner
 pip install -e .
 ```
