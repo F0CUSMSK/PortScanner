@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=45", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "portscanner-edu"
+version = "1.0.0"
+description = "A friendly, educational port scanner for learning networking concepts"
+readme = "README.md"
+requires-python = ">=3.7"
+license = {text = "MIT"}
+authors = [
+    {name = "Educational Port Scanner"}
+]
+keywords = ["networking", "ports", "education", "learning", "security"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Education",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: English",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Education",
+    "Topic :: System :: Networking",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=6.0",
+    "black>=21.0",
+    "flake8>=3.9",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/portscanner"
+Documentation = "https://github.com/yourusername/portscanner#readme"
+Repository = "https://github.com/yourusername/portscanner.git"
+Issues = "https://github.com/yourusername/portscanner/issues"
+
+[tool.black]
+line-length = 100
+target-version = ["py37"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["portscanner*"]

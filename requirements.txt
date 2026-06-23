@@ -1,0 +1,25 @@
+# PortScanner Requirements
+# 
+# Good news! PortScanner uses ONLY Python's standard library.
+# No external packages need to be installed!
+#
+# Just run: python3 main.py --interactive
+#
+# Standard library modules used:
+# - socket (networking)
+# - threading (parallel processing)
+# - concurrent.futures (thread pools)
+# - argparse (command-line arguments)
+# - json (JSON export)
+# - pathlib (file paths)
+# - dataclasses (data structures)
+# - enum (port states)
+# - datetime (timestamps)
+# - re (regex for IP validation)
+# - os (file operations)
+# - time (timing/delays)
+#
+# Python Requirements:
+# - Python 3.7 or higher
+#
+# That's it! No pip install needed. Just clone and run.
